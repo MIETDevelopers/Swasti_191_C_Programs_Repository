@@ -1,8 +1,8 @@
-// A C Program demonstrating use of malloc() function.  
+// A C Program demonstrating use of free() function.          
 
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main () {
    char *str;
@@ -14,9 +14,10 @@ int main () {
 
    // Reallocating memory 
    str = (char *) realloc(str, 25);
-   strcat(str, "_Gupta");
+   strcat(str, "_191");
    printf("String = %s,  Address = %u\n", str, str);
 
+   //Deallocate allocated memory 
    free(str);
    
    return(0);
